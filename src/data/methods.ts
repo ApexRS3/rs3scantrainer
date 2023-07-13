@@ -3767,7 +3767,7 @@ let raw: (method & indirected)[] = [
             },
             {
                 "name": "D",
-                "level": 0,
+                "level": 1,
                 "area": {
                     "topleft": {
                         "x": 2713,
@@ -3781,7 +3781,7 @@ let raw: (method & indirected)[] = [
             },
             {
                 "name": "E",
-                "level": 1,
+                "level": 0,
                 "area": {
                     "topleft": {
                         "x": 2713,
@@ -4168,7 +4168,7 @@ let raw: (method & indirected)[] = [
                                                     {
                                                         "key": {
                                                             "pulse": 1,
-                                                            "different_level": false
+                                                            "different_level": true
                                                         },
                                                         "value": {
                                                             "where": "E",
