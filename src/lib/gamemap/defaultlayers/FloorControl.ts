@@ -13,7 +13,7 @@ export default class FloorControl extends GameMapControl {
     super({
       position: "bottom-right",
       type: "floating"
-    }, c("<div style='display: flex' class='nis-map-control'>"));
+    }, c("<div style='display: flex; flex-direction: column-reverse' class='nis-map-control'>"));
 
     this.down = c("<div style='cursor: pointer'><img src='assets/icons/stairdown.png' style='width: 20px; padding: 4px'></div>")
       .tooltip("Go down (PageDown)")
@@ -22,7 +22,7 @@ export default class FloorControl extends GameMapControl {
         this.goDown()
       }))
       .appendTo(this.content.container)
-    this.current = c("<div style='border-left: 1px solid rgb(5, 56, 66); border-right: 1px solid rgb(5, 56, 66); padding-left: 4px; padding-right: 4px; line-height: 20px'>Floor 0</div>").appendTo(this.content.container)
+    this.current = c("<div style='border-left: 1px solid rgb(5, 56, 66); border-right: 1px solid rgb(5, 56, 66); padding-left: 4px; padding-right: 4px; line-height: 20px'>0</div>").appendTo(this.content.container)
     this.up = c("<div style='cursor: pointer'><img src='assets/icons/stairup.png' style='width: 20px; padding: 4px'></div>")
       .tooltip("Go up (PageUp)")
       .tapRaw(r => r.on("click", (e) => {
@@ -43,7 +43,7 @@ export default class FloorControl extends GameMapControl {
   }
 
   onAdd(map: GameMap) {
-    map.floor.subscribe((f) => this.current.text(`Floor ${f}`))
+    map.floor.subscribe((f) => this.current.text(`${f}`))
 
     return super.onAdd(map)
   }
