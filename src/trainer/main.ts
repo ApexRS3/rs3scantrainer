@@ -9,14 +9,14 @@ import LightButton from "./ui/widgets/LightButton";
 
 export async function makeshift_main(): Promise<void> {
 
-  /*
+
   await (new class extends NisModal {
     render() {
       super.render()
 
       new LightButton("Do")
         .onClick(async () => {
-          const res = await SlideReader.read(new ImgRefData(await ImageDetect.imageDataFromUrl("assets/test.png")), {x: 0, y: 0}, "bridge")
+          const res = await SlideReader.read(new ImgRefData(await ImageDetect.imageDataFromUrl("assets/test.png")), {x: 0, y: 0})
 
           const tiles = SliderPuzzle.getState(res)
 
@@ -27,7 +27,7 @@ export async function makeshift_main(): Promise<void> {
           console.log(res)
         }).appendTo(this.body)
     }
-  }).show()*/
+  }).show()
 
 
   /* let output = ""
